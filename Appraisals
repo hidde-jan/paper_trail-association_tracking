@@ -8,27 +8,31 @@
 
 ### WHEN UPDATING THESE VERSIONS DONT FORGOT TO UPDATE .github/workflows/test.yml
 pt_versions = [
-  '~>12.0', 
+  '~> 12.0', 
 ]
 
 ar_versions = [
   [
-    '~>5.2', 
+    '~> 5.2', 
     pt_versions,
   ],
   [
-    '~>6.0', 
+    '~> 6.0', 
     pt_versions,
   ],
   [
-    '~>6.1', 
+    '~> 6.1', 
+    pt_versions,
+  ],
+  [
+    '~> 7.0', 
     pt_versions,
   ],
 ]
 
 ar_versions.each do |ar_ver, compatible_pt_versions|
   compatible_pt_versions.each do |pt_ver|
-    appraise "ar_#{ar_ver.sub('~>','')} pt_#{pt_ver.sub('~>','')}" do
+    appraise "ar_#{ar_ver.sub('~> ','')} pt_#{pt_ver.sub('~> ','')}" do
       gem "activerecord", ar_ver
 
       if pt_ver == 'master'
