@@ -194,3 +194,4 @@ Associations code originally contributed by Ben Atkins, Jared Beck, Andy Stewart
 Model Versioning and Restoration require concious thought, design, and understanding. You should understand your versioning and restoration process completely. Because PT-AT it is mostly a blackbox solution which encourages you to set it up and then assume its "Just Working". This can make for major data problems later.
 
 Instead I recommend a newer gem that I have created for handling snapshots of records and associations called [active_snapshot](https://github.com/westonganger/active_snapshot). This gem does not utilize `paper_trail` at all. The focus of this gem is to have a simple and fully understandable design is easy to customize and know inside and out for your projects needs.
+
