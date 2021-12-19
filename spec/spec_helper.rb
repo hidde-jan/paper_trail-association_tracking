@@ -61,6 +61,8 @@ end
 require "rspec/core"
 require "rspec/matchers"
 
+require 'paper_trail/frameworks/rspec'
+
 RSpec::Matchers.define :have_a_version_with do |attributes|
   # check if the model has a version with the specified attributes
   match do |actual|
